@@ -2,9 +2,9 @@
 Compilado de scripts para routers/switches Mikrotiks.
 
 ## Listado de scripts
-* Kill Tunel IPSec
-* On-Off Tunel EoIP
-* Reset Modem USB 4G
+* Kill IPSec Tunnel
+* On-Off EoIP Tunnel
+* Reset 4G USB Modem
 
 ## Comando para programar el schedule
 ```

@@ -1,12 +1,12 @@
-# Mikrotik-Scripts
-Scripts para routers Mikrotiks
+# Scripts Mikrotiks
+Compilado de scripts para routers/switches Mikrotiks.
 
 ## Listado de scripts
 * Kill Tunel IPSec
 * On-Off Tunel EoIP
 * Reset Modem USB 4G
 
-## Scheduler
+## Comando para programar el schedule
 ```
 /system scheduler
 add comment="Ejecuta SCRIPT" interval=1m name=schedulerName on-event=scriptName policy=\

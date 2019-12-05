@@ -1,4 +1,4 @@
-# Mikrotiks scripts
+# Mikrotik's scripts
 Compilation of scripts for Mikrotiks routers/switches.
 
 ## List of scripts

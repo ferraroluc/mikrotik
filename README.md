@@ -22,7 +22,7 @@ add comment="Ejecuta SCRIPT X" interval=1m name=schedulerName on-event=scriptNam
 vi devices.txt
 ```
 ```
-[bicicleteros]
+[MikrotikDevices]
 device1 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
 device2 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
 ```

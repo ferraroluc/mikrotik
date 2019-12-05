@@ -49,5 +49,5 @@ vi MikrotiksTask1.yml
 
 ### Run the task
 ```
-ansible-playbook MikrotikTask1.yml -i devices.txt -u USER -k
+ansible-playbook MikrotiksTask1.yml -i devices.txt -u USER -k
 ```

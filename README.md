@@ -21,15 +21,16 @@ add comment="Ejecuta SCRIPT X" interval=1m name=schedulerName on-event=scriptNam
 ```
 vi devices.txt
 ```
+```
 [bicicleteros]
 device1 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
 device2 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
+```
 
 ### Create de Ansible tasks
 ```
-vi MikrotikTask1.yml
+vi MikrotiksTask1.yml
 ```
-
 ```
 ---
 
@@ -45,7 +46,8 @@ vi MikrotikTask1.yml
 
 ...
 ```
-### Ejecute the task
+
+### Run the task
 ```
 ansible-playbook MikrotikTask1.yml -i devices.txt -u USER -k
 ```

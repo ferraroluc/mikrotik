@@ -1,4 +1,4 @@
-# Scripts for Mikrotiks
+# Scripts for Mikrotik
 Compilation of scripts for Mikrotik routers/switches.
 
 ## List of scripts
@@ -10,6 +10,7 @@ Compilation of scripts for Mikrotik routers/switches.
 * USB_4G_modem-reset: if the EoIP tunnel is not active, it will restart it
 
 ## Schedule the script
+On the terminal of the device:
 ```
 /system scheduler
 add comment="Ejecuta SCRIPT X" interval=1m name=schedulerName on-event=scriptName policy=\
@@ -27,15 +28,15 @@ device1 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
 device2 ansible_ssh_host=192.168.XXX.XXX ansible_network_os=routeros
 ```
 
-### Create de Ansible tasks
+### Create de Ansible task
 ```
-vi MikrotiksTask1.yml
+vi MikrotikTask1.yml
 ```
 ```
 ---
 
-- name: "Script for Mikrotiks"
-  hosts: Mikrotiks_devices
+- name: "Script for Mikrotik"
+  hosts: Mikrotik_devices
   connection: network_cli
   gather_facts: no
   
@@ -49,5 +50,5 @@ vi MikrotiksTask1.yml
 
 ### Run the task
 ```
-ansible-playbook MikrotiksTask1.yml -i devices.txt -u USER -k
+ansible-playbook MikrotikTask1.yml -i devices.txt -u USER -k
 ```

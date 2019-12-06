@@ -1,5 +1,5 @@
 # Scripts for Mikrotiks
-Compilation of scripts for Mikrotiks routers/switches.
+Compilation of scripts for Mikrotik routers/switches.
 
 ## List of scripts
 * EoIP_tunnel-logging: log information on changes in the EoIP tunnel

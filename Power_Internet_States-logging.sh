@@ -18,5 +18,5 @@
 } else={
 :set $message ("\n$day - $time: Casa NO responde.");
 }
-/file set HouseStates contents=([get HouseStates contents] . $message);
+/file set HouseStates.txt contents=([get HouseStates.txt contents] . $message);
 }

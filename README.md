@@ -2,6 +2,7 @@
 Compilation of scripts for Mikrotik routers/switches.
 
 ## List of scripts
+* Email-EveryMonth: Send an e-mail every 1st day of the month
 * EoIP_tunnel-logging: log information on changes in the EoIP tunnel
 * EoIP_tunnel-onoff_layer_2: turn on/off EoIP tunnel with a layer 2 ping
 * EoIP_tunnel-onoff_layer_3: turn on/off EoIP tunnel with a layer 3 ping

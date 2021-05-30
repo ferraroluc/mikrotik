@@ -15,8 +15,10 @@
 :set $lastHomeState $currentHomeState;
 :if ($currentHomeState = "up") do={
 :set $message ("\n$day - $time: Casa comenzo a responder nuevamente.");
+/tool e-mail send to="user@domain.com" subject="Mikrotik Casa" body="Casa comenzo a responder nuevamente.";
 } else={
 :set $message ("\n$day - $time: Casa NO responde.");
+/tool e-mail send to="user@domain.com" subject="Mikrotik Casa" body="Casa NO responde.";
 }
 /file set HouseStates.txt contents=([get HouseStates.txt contents] . $message);
 }

@@ -4,6 +4,6 @@
 :local time [/system clock get value-name=time];
 
 :if ($prendido < $referencia) do={
-:set $message ("\n$day - $time: El Mikrotik se habia apagado y se encendio hace poco.");
+:set $message ("\n$day - $time: El Mikrotik se reinicio.");
 /file set PowerStates.txt contents=([get PowerStates.txt contents] . $message);
 }

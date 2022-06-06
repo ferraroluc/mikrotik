@@ -9,6 +9,7 @@ Compilation of scripts for Mikrotik routers/switches.
 * Firewall-MAC_device: create firewall rules with an IP address taken from the DHCP server
 * IPSec_tunnel-reset: reset the EoIP tunnel if it does not respond
 * Power_Internet_Problem-logging: If another Mikrotik stops responding ping, save the date to a file
+* Provider_Report: Log if the provider connection is bad
 * USB_4G_modem-reset: if the EoIP tunnel is not active, it will restart it
 
 ## Schedule the script

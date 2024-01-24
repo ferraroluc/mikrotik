@@ -17,4 +17,10 @@ EOF
 
 ssh user@192.168.1.1 "$TEMPLATE"
 
-echo "Ready. Secret is $SECRET"
+if [ ! -d "Certs" ]; then
+    mkdir Certs
+fi
+sftp user@192.168.1.1:cert_export_ca.crt && mv cert_export_ca.crt Certs/
+sftp user@192.168.1.1:cert_export_$NAME-$YEAR.p12 && mv cert_export_$NAME-$YEAR.p12 Certs/
+
+echo "Ready. Secret is \"$SECRET\" and the necessary files were downloaded to the \"Certs\" folder."

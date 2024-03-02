@@ -28,7 +28,7 @@ TEMPLATE=$(sed -e "s/\$NAME/$NAME/g" -e "s/\$YEAR/$YEAR/g" -e "s/\$SECRET/$SECRE
 /certificate sign $NAME-$YEAR ca=ca
 /certificate set trusted=yes $NAME-$YEAR
 /certificate export-certificate $NAME-$YEAR type=pkcs12 export-passphrase=$SECRET
-/ip ipsec identity add auth-method=digital-signature certificate=server generate-policy=port-strict match-by=certificate mode-config=modeconfig-ikev2-$USER_TYPE peer=peer-wan policy-template-group=group-ikev2 remote-certificate=$NAME-$YEAR remote-id=user-fqdn:$NAME@DOMAIN.com
+/ip ipsec identity set [find remote-id="user-fqdn:$NAME@DOMAIN.com"] mode-config="modeconfig-ikev2-$USER_TYPE" remote-certificate=$NAME-$YEAR
 EOF
 )
 
@@ -40,4 +40,4 @@ fi
 sftp user@192.168.1.1:cert_export_ca.crt && mv cert_export_ca.crt Certs/
 sftp user@192.168.1.1:cert_export_$NAME-$YEAR.p12 && mv cert_export_$NAME-$YEAR.p12 Certs/
 
-echo "Ready. Secret is \"$SECRET\" and the necessary files were downloaded to the \"Certs\" folder."
+echo "Done. The secret is \"$SECRET\" and the necessary files have been downloaded to the \"Certs\" folder."
